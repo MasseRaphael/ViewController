@@ -1,0 +1,42 @@
+[
+    {
+        "Nom": "Henriques",
+        "Prenom": "Sylvio",
+        "TechnoPref": "C#"
+    },
+    {
+        "Nom" : "Nguyen",
+        "Prenom" : "Timothée",
+        "TechnoPref" : "C#"
+    },
+    {
+        "Nom" : "Couto de Oliviera",
+        "Prenom" : "Dylan",
+        "TechnoPref" : "Python"
+    },
+    {
+        "Nom" : "De Campos",
+        "Prenom" : "Armelio",
+        "TechnoPref" : "Python"
+    },
+    {
+        "Nom" : "Carlus",
+        "Prenom" : "Thomas",
+        "TechnoPref" : "C#"
+    },
+    {
+        "Nom" : "Masse",
+        "Prenom" : "Raphaël",
+        "TechnoPref" : "PHP"
+    },
+    {
+        "Nom" : "Lemelle",
+        "Prenom" : "Tom",
+        "TechnoPref" : "JS"
+    },
+    {
+        "Nom" : "Vareille",
+        "Prenom" : "Nicolas",
+        "TechnoPref" : "C#"
+    }
+]

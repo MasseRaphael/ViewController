@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ViewController.Services;
 
 namespace ViewController
 {
@@ -26,6 +27,8 @@ namespace ViewController
             IMvcBuilder instance = services.AddControllersWithViews();
 
             instance.AddRazorRuntimeCompilation();
+
+            services.AddSingleton<StudentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
