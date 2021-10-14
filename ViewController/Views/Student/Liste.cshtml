@@ -11,37 +11,35 @@
 </p>
 <table class="table">
     <thead>
-        <tr>
-            <th>
-                Nom
-            </th>
-            <th>
-                Prenom
-            </th>
-            <th>
-                Techno Préféré
-            </th>
-            <th></th>
-        </tr>
+    <tr>
+        <th>
+            Nom
+        </th>
+        <th>
+            Prenom
+        </th>
+        <th>
+            Techno Préféré
+        </th>
+        <th></th>
+    </tr>
     </thead>
     <tbody>
 @foreach (Student item in Model) {
-        <tr>
-            <td>
-                @item.Nom
-            </td>
-            <td>
-                @item.Prenom
-            </td>
-            <td>
-                @item.TechnoPref
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @item.Nom
+        </td>
+        <td>
+            @item.Prenom
+        </td>
+        <td>
+            @item.TechnoPref
+        </td>
+        <td>
+            <a asp-controller="Student" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+        </td>
+    </tr>
 }
     </tbody>
 </table>

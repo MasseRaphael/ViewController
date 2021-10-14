@@ -7,6 +7,7 @@ namespace ViewController.Models
 {
     public class Student
     {
+        public Guid Id;
         public string Nom;
         public string Prenom;
         public string TechnoPref;

@@ -9,7 +9,7 @@ using ViewController.Services;
 
 namespace ViewController.Controllers
 {
-    [Route("[Controller]/")]
+    [Route("/")]
     public class StudentController : Controller
     {
         public StudentService StudentService;
@@ -28,14 +28,29 @@ namespace ViewController.Controllers
         {
             Student newStudent = new Student()
             {
+                Id = Guid.NewGuid(),
                 Nom = nom,
                 Prenom = prenom,
                 TechnoPref = technoPref
             };
 
-            string output = JsonConvert.SerializeObject(newStudent);
+            StudentService.AddStudent(newStudent);
 
-            return View("Create");
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet("delete/{id}")]
+        public IActionResult Delete(Guid id)
+        {
+            StudentService.DeleteStudent(id);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet("edit/{nom}/{prenom}/{technoPref}")]
+        public IActionResult Edit(string nom, string prenom, string technoPref)
+        {
+            StudentService.EditStudent(nom, prenom, technoPref);
+            return RedirectToAction("Index");
         }
     }
 }
